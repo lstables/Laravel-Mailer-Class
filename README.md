@@ -16,3 +16,26 @@ public function store(AppMailer $mailer)
   return back(); // Whatever you like
 }
 ````
+
+or via your constructor method like so and I store in ````app/Mailers````
+
+````
+use App\Mailers\AppMailer;
+
+ /**
+ * @var AppMailer
+ */
+private $mailer;
+
+/**
+ * constructor.
+ * @param AppMailer $mailer
+ */
+public function __construct(AppMailer $mailer)
+{
+    $this->mailer = $mailer;
+}
+
+````
+
+Then just refer to ````$this->mailer->sendEmailConfirmationTo()```` or whever methods you have within the mailer class.
