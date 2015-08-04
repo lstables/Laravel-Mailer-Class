@@ -1,4 +1,5 @@
-# Laravel-Mailer-Class
+## Laravel Mailer Class
+
 A simple Laravel mailer class
 
 You can use this as you wish, just a simple class to help cleanup code and send mail.
