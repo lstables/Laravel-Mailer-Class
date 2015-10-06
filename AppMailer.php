@@ -22,6 +22,11 @@ class AppMailer
     protected $adminEmail = 'your-admin-email@domain.com';
 
     /**
+     * From name or company
+     */
+    protected $fromName = '';
+
+    /**
      * The sender of the email.
      *
      * @var string
@@ -60,6 +65,7 @@ class AppMailer
     }
 
     /**
+     * EXAMPLE
      * Deliver the email confirmation.
      *
      * @param  User $user
@@ -84,7 +90,7 @@ class AppMailer
     public function deliver()
     {
         $this->mailer->send($this->view, $this->data, function ($message) {
-            $message->from($this->from, 'Your Company Name')
+            $message->from($this->from, $this->fromName)
                 ->subject($this->subject)
                 ->to($this->to);
         });
