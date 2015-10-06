@@ -13,7 +13,7 @@ public function store(AppMailer $mailer)
   // pass the user object through, do whatever you want here
   
   // Send email
-  $mail->sendEmailConfirmationTo($user);
+  $mailer->sendEmailConfirmationTo($user);
   return back(); // Whatever you like
 }
 ````
