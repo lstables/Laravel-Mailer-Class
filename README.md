@@ -6,7 +6,7 @@ You can use this as you wish, just a simple class to help cleanup code and send 
 
 The best way to use is either type-hint from your method:
 
-````
+```php
 public function store(AppMailer $mailer)
 {
   // Do some stuff
@@ -20,7 +20,7 @@ public function store(AppMailer $mailer)
 
 or via your constructor method like so and I store in ````app/Mailers````
 
-````
+```php
 use App\Mailers\AppMailer;
 
  /**
