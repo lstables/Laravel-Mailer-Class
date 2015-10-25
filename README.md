@@ -39,4 +39,4 @@ public function __construct(AppMailer $mailer)
 
 ````
 
-Then just refer to ````$this->mailer->sendEmailConfirmationTo()```` or whever methods you have within the mailer class.
+Then just refer to ````$this->mailer->sendEmailConfirmationTo()```` or whatever methods you have within the mailer class.
